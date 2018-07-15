@@ -15,9 +15,17 @@ CREATE TABLE products(
   primary key (item_id)
 );
 
+-- add a new column to the products table
+Use bamazon;
+ALTER Table products
+ADD COLUMN product_sales decimal(10,2) NOT NULL Default 6000 AFTER stock_quantity;
+
+
 USE bamazon;
 select * from products
 
+
+-- insert initial data into the products table
 insert into bamazon.products (product_name, department_name, price, stock_quantity)
 Values 	("Jeans", "Clothing", 35.00, 50),
 		("Summer Dress", "Clothing", 25.00, 40),
@@ -30,4 +38,40 @@ Values 	("Jeans", "Clothing", 35.00, 50),
         ("Bicycle", "Outdoors", 300.00, 30),
         ("Tent", "Outdoors", 125.00, 30),
         ("Backpack", "Outdoors", 85, 25);
+        
+--delete from bamazon.products where item_id = 13
+
+update bamazon.products set product_sales = 6000 where item_id = 12
+
+USE bamazon;
+CREATE TABLE departments(
+  department_id INT NOT NULL AUTO_INCREMENT,		
+  department_name VARCHAR(50) NOT NULL,		
+  over_head_costs decimal(10,2) NOT NULL,				
+  primary key (department_id)
+);
+
+insert into bamazon.departments (department_name, over_head_costs)
+Values 	("Clothing",1500),
+		("Grocery", 2000),
+        ("Outdoors", 2500),
+        ("Other", 3000)
+        
+select * from bamazon.departments
+
+select * from departments as d
+inner join products as p on
+d.department_name = p.department_name
+
+
+-- query for supervisor view - cost, sales, profit
+SELECT d.department_id, d.department_name, d.over_head_costs, Table2.total_sales, 
+		(Table2.total_sales - d.over_head_costs) as total_profit
+FROM departments as d join 
+(
+    SELECT department_name, SUM(product_sales) as total_sales
+    FROM products
+    GROUP BY department_name
+) Table2 on d.department_name = Table2.department_name
+
         
