@@ -84,6 +84,7 @@ departments table:
 
 # bamazonCustomer.js
 1. Product table displayed and user prompt
+
 ![customer1.png](images/customer1.png)
 
 2. User prompts (with validation), total cost of purchase, continue prompt, exit message
