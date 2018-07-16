@@ -88,21 +88,21 @@ departments table:
 ![customer1.png](images/customer1.png)
 
 2. User prompts (with validation), total cost of purchase, continue prompt, exit message
-![customer2.png](images/customer1.png)
+![customer2.png](images/customer2.png)
 
 # bamazonManager.js
 1. Product table displayed, user prompt, view low inventory (none < 5), continue prompt
-![manager1.png](images/customer1.png)
+![manager1.png](images/manager1.png)
 
 2.  Add inventory prompts (with validation), success message, continue prompt
-![manager2.png](images/customer1.png)
+![manager2.png](images/manager2.png)
 
 3. Add new product prompts, success message, continue prompt, exit message
-![manager2.png](images/customer1.png)
+![manager3.png](images/manager3.png)
 
 # bamazonSupervisor.js
 1. User prompts, View Sales by department (table displayed with correct values), continue prompt, menu options
-![supervisor1.png](images/customer1.png)
+![supervisor1.png](images/supervisor1.png)
 
 2.  Add new department, prompts (with validation), success message, continue prompt, exit message
-![supervisor2.png](images/customer1.png)
+![supervisor2.png](images/supervisor2.png)
