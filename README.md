@@ -9,9 +9,9 @@ Bamazon is an Amazon-like storefront.  The app will take in orders from customer
 https://rmxjohnson.github.io/bamazon/
 
 # Built with:
-Node.js
-MySQL 
-NPM packages:  mysql, inquirer, cli-table
+ * Node.js
+ * MySQL 
+ * NPM packages:  mysql, inquirer, cli-table
 
 # Tables in bamazon database
 
