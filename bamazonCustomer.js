@@ -61,7 +61,6 @@ function start() {
         // }
         // console.log(table.toString());
 
-
         // prompt user for product ID & Quantity for purchase
         inquirer
             .prompt([
@@ -69,6 +68,7 @@ function start() {
                     name: "choice",
                     type: "input",
                     message: "What is the ID of the product you would like to purchase?",
+
                     // input should be a valid item number
                     validate: function validateItem(value) {
                         if (!isNaN(value) && (parseInt(value) > 0) && (parseInt(value) <= res.length)) {
@@ -86,12 +86,12 @@ function start() {
                     message: "How many would you like to purchase?",
                     // input should be a number
                     validate: function validateItem(value) {
-                        if (isNaN(value)) {
-                            console.log("\n   Please enter a valid quantity." + value);
-                            return false;
+                        if (!isNaN(value) && (parseInt(value) >= 0)) {
+                            return true;
                         }
                         else {
-                            return true;
+                            console.log("\n   Please enter a valid quantity.");
+                            return false;
                         }
                     }
                 }

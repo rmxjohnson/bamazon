@@ -205,12 +205,12 @@ function addInventory() {
                     message: "How much inventory would you like to add?",
                     // input should be a number
                     validate: function validateItem(value) {
-                        if (isNaN(value)) {
-                            console.log("\n   Please enter a valid quantity." + value);
-                            return false;
+                        if (!isNaN(value) && (parseInt(value) >= 0)) {
+                            return true;
                         }
                         else {
-                            return true;
+                            console.log("\n   Please enter a valid quantity.");
+                            return false;
                         }
                     }
                 }

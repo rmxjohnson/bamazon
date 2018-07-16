@@ -31,7 +31,7 @@ departments table:
    * over_head_costs 
 
 
-## Syopsis of each Module
+## Synopsis of each Module
 
 # bamazonCustomer.js
 
@@ -51,7 +51,7 @@ departments table:
 
 # bamazonManager.js
 
-  1. On entry, the user is given a set of menu options:
+1. On entry, the user is given a set of menu options:
 
     * View Products for Sale    
     * View Low Inventory    
@@ -78,4 +78,30 @@ departments table:
 
 3. `product_sales` & `total_profit` columns are not stored in the database but are calulated when needed
 
-4. `Create New Depoartment` - allows the user to add a new department to the store (validation of user input)
+4. `Create New Department` - allows the user to add a new department to the store (validation of user input)
+
+## Screenshots
+
+# bamazonCustomer.js
+1. Product table displayed and user prompt
+![customer1.png](images/customer1.png)
+
+2. User prompts (with validation), total cost of purchase, continue prompt, exit message
+![customer2.png](images/customer1.png)
+
+# bamazonManager.js
+1. Product table displayed, user prompt, view low inventory (none < 5), continue prompt
+![manager1.png](images/customer1.png)
+
+2. Add inventory prompts (with validation), success message, continue prompt
+![manager2.png](images/customer1.png)
+
+3. Add new product prompts, success message, continue prompt, exit message
+![manager2.png](images/customer1.png)
+
+# bamazonSupervisor.js
+1. User prompts, View Sales by department (table displayed with correct values), continue prompt, menu options
+![supervisor1.png](images/customer1.png)
+
+1. Add new department, prompts (with validation), success message, continue prompt, exit message
+![supervisor2.png](images/customer1.png)
